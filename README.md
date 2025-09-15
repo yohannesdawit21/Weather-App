@@ -6,8 +6,8 @@ Please read the instructions carefully before starting.
 ---
 
 ## 📘 Student Info
-- **Full Name:** [Your Full Name]
-- **Group:** G[1/2/3/...]
+- **Full Name:** Yohannes Dawit
+- **Group:** G[3]
 - **Track:** Frontend
 
 ---
