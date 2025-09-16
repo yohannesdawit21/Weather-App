@@ -1,0 +1,246 @@
+
+.Weather {
+  place-self: center;
+  padding: 40px;
+  background: linear-gradient(to bottom right, #5acfba, #7dcec4);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+}
+
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.search-bar input {
+  height: 50px;
+  flex: 1;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 40px;
+  font-size: 18px;
+  color: #626262;
+  background: #ebfffc;
+  transition: all 0.3s ease;
+}
+
+.search-bar input:hover,
+.search-bar input:focus {
+  background: #d6f9f6;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 191, 165, 0.6);
+}
+
+.search-bar button {
+  height: 50px;
+  width: 100px;
+  border: none;
+  border-radius: 40px;
+  background: #00bfa5;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-bar button:hover {
+  background: #009e8c;
+  transform: scale(1.05);
+}
+
+
+.weather-icon {
+  height: 150px;
+  width: 150px;
+  margin: 30px 0;
+}
+
+.temperature {
+  font-size: 80px;
+  color: white;
+  line-height: 1;
+  margin: 10px 0;
+}
+
+.location {
+  font-size: 40px;
+  color: white;
+  margin: 10px 0;
+}
+
+.weather-data {
+  width: 100%;
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.weather-data .col {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 22px;
+  flex: 1 1 45%;
+  margin-bottom: 20px;
+}
+
+.weather-data .col span {
+  display: block;
+  font-size: 16px;
+}
+
+.weather-data .col img {
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+}
+
+/* ================= Animated Elements ================= */
+
+/* Clouds */
+.cloud {
+  width: 100px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50px;
+  position: absolute;
+  top: 10%;
+  left: -150px;
+  box-shadow: 30px 10px 0 #fff, 60px 15px 0 #fff;
+  animation: cloudMove 40s linear infinite;
+}
+
+@keyframes cloudMove {
+  from {
+    left: -150px;
+  }
+  to {
+    left: 110%;
+  }
+}
+/* === Sun Effect === */
+.sun {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #FFD93D 40%, #FFC300 70%, rgba(255, 200, 0, 0.3) 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(255, 200, 0, 0.8), 0 0 80px rgba(255, 200, 0, 0.6);
+  animation: pulse 4s infinite ease-in-out;
+   z-index: 999; /* 👈 makes sure sun is above everything */
+  pointer-events: none;
+}
+/* Rays around the sun */
+.sun::before,
+.sun::after {
+  content: "";
+  position: absolute;
+  inset: -40px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    rgba(255, 223, 0, 0.7) 0deg 10deg,
+    transparent 10deg 20deg
+  );
+  animation: spin 15s linear infinite;
+}
+
+/* Slight glow pulse */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 40px rgba(255, 200, 0, 0.8), 0 0 80px rgba(255, 200, 0, 0.6);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 60px rgba(255, 200, 0, 1), 0 0 100px rgba(255, 200, 0, 0.8);
+  }
+}
+
+/* Ray rotation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* Moon */
+.moon {
+  width: 60px;
+  height: 60px;
+  background: #f0f0f0;
+  border-radius: 50%;
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  box-shadow: -15px 0 0 5px #d9d9d9;
+  animation: moonGlow 6s ease-in-out infinite;
+}
+
+@keyframes moonGlow {
+  0%, 100% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+
+/* ================= Responsiveness ================= */
+@media (max-width: 768px) {
+  .Weather {
+    padding: 20px;
+  }
+  .temperature {
+    font-size: 50px;
+  }
+  .location {
+    font-size: 24px;
+  }
+  .weather-icon {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar {
+    flex-direction: column;
+  }
+  .search-bar button {
+    width: 100%;
+  }
+  .temperature {
+    font-size: 40px;
+  }
+  .location {
+    font-size: 20px;
+  }
+  .weather-icon {
+    width: 100px;
+    height: 100px;
+  }
+  .sun, .moon {
+    width: 70px;
+    height: 70px;
+    top: 5%;
+    right: 5%;
+  }
+}

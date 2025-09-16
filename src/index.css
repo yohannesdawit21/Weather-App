@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins" , sans-serif;
+}
+.app {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  /* Softer sky background */
+  background: linear-gradient(to top, #89f7fe, #66a6ff);
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden; /* useful if you later add animated clouds/snow */
+}
