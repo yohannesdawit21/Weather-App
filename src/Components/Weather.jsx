@@ -117,7 +117,7 @@ const Weather = () => {
         </div>
       )}
 
-      {/* === Weather Card === */}
+      {/* === Weather Cards === */}
       <div className='Weather'>
         <div className="search-bar">
           <input
