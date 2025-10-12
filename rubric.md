@@ -16,12 +16,12 @@
 
 | Criteria            | Max Points | Score | Notes |
 |---------------------|------------|-------|-------|
-| Functionality       | 40         |       |       |
-| Code Quality        | 25         |       |       |
-| Documentation       | 20         |       |       |
-| Timely Submission   | 15         |       |       |
+| Functionality       | 40         | 36      |       |
+| Code Quality        | 25         |  22.5     |       |
+| Documentation       | 20         |  19.5     |       |
+| Timely Submission   | 15         | 11    |       |
 
-**Total:** /100
+**Total:89 /100
 
 ---
 
