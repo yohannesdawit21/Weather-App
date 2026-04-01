@@ -1,19 +1,38 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "poppins" , sans-serif;
 }
+
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #f7fbff;
+  background: #07142f;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: 0;
+}
+
 .app {
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-
-  /* Softer sky background */
-  background: linear-gradient(to top, #89f7fe, #66a6ff);
-
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  overflow: hidden; /* useful if you later add animated clouds/snow */
+  min-height: 100vh;
 }
