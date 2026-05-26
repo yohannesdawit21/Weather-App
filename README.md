@@ -1,81 +1,102 @@
-# Summer Bootcamp 2025 – Final Project (Frontend Track)
+# SkyCast Weather
 
-👋 Welcome to your final project repository!  
-Please read the instructions carefully before starting.
+`SkyCast Weather` is a polished weather app built with `React` and `Vite`. It fetches live data from the `OpenWeatherMap` API, detects the user's current location, and renders a dynamic animated interface that visually changes for clear skies, clouds, rain, storms, snow, and mist.
 
----
+## Student Info
+- Name: `Yohannes Dawit`
+- Group: `G3`
+- Track: `Frontend`
 
-## 📘 Student Info
-- **Full Name:** Yohannes Dawit
-- **Group:** G[3]
-- **Track:** Frontend
+## End Product
+- Animated real-time weather scenes that react to live weather codes
+- Search by city or load weather from the user's current location
+- Weather details including temperature, feels-like, humidity, wind speed, visibility, pressure, sunrise, and sunset
+- Responsive glassmorphism UI optimized for desktop and mobile
+- Production-ready Vercel setup with environment variable guidance
 
----
+## Tech Stack
+- `React 19`
+- `Vite`
+- Plain `CSS` animations
+- `OpenWeatherMap API`
+- `Vercel`
 
-## 🚀 Instructions
-1. Add all your source code inside the `src/` folder.
-2. Update this `README.md` with:
-   - Project title
-   - Short description
-   - Features
-   - How to run your project (setup + commands)
-   - Screenshots or demo link (if any)
+## Local Setup
+1. Install dependencies:
 
----
-
-## ✅ Submission Rules
-- Push your project code to this repository.  
-- Mark your final version by tagging:
-  ```bash
-  git tag v1.0-final
-  git push origin v1.0-final
-
-# 🌦️ React Weather App
-
-A simple, modern weather application built with **React** and the **OpenWeatherMap API**.  
-It detects the user's location on first load (using the **Geolocation API**) and shows real-time weather details with icons and animations (☀️ Sun, ☁️ Clouds, ❄️ Snow, 🌧️ Rain).
-
----
-
-## ✨ Features
-- 🌍 Auto-detect location on first load  
-- 🔎 Search weather by city name  
-- 🌡️ Shows **temperature, humidity, and wind speed**  
-- ⛅ Dynamic weather icons (clear, cloudy, rain, snow, etc.)  
-- ❄️ Snow animation when it’s snowing  
-- ☀️ Animated sun and moving clouds in the background  
-- 📱 Responsive design for desktop & mobile  
-
----
-
-## 📦 Tech Stack
-- **React.js (Vite)**  
-- **CSS Animations**  
-- **OpenWeatherMap API**  
-
----
-
-## 🚀 Getting Started
-
-### 1. Clone the repository
 ```bash
+npm install
+```
 
+2. Create a local environment file:
+
+```bash
+cp .env.example .env
+```
+
+3. Add your OpenWeather API key in `.env`:
+
+```env
+VITE_APP_ID=your_openweathermap_api_key_here
+```
+
+4. Start the development server:
+
+```bash
+npm run dev
+```
+
+## Production Build
+
+```bash
+npm run build
+```
+
+## Vercel Deployment
+1. Push the repository to GitHub.
+2. Import the project into [Vercel](https://vercel.com/).
+3. In Vercel project settings, add this environment variable:
+
+```env
+VITE_APP_ID=your_openweathermap_api_key_here
+```
+
+4. Deploy the project.
+
+This repo already includes `vercel.json`, so Vercel knows the framework, install command, build command, and output directory.
+
+## Important Security Note
+- Do not commit real API keys to Git.
+- If a key was already committed before, rotate it in your OpenWeather dashboard and replace it with a new one in Vercel and your local `.env`.
+
+## Project Structure
+
+```text
 src/
-├── assets/          # Weather icons (clear.png, cloud.png, rain.png, etc.)
-├── components/
-│   └── Weather.jsx  # Main weather component
-├── Weather.css      # Styles & animations
-└── main.jsx         # React entry point
-🔮 Future Enhancements
+  App.jsx
+  main.jsx
+  index.css
+  assets/
+  Components/
+    Weather.jsx
+    Weather.css
+public/
+  robots.txt
+  site.webmanifest
+vercel.json
+```
 
-📅 5-day forecast
+## Features
+- Current location weather on first load
+- City search with cleaner error handling
+- Animated day and night scenes
+- Weather-state backgrounds for clear, cloudy, mist, drizzle, rain, storm, and snow
+- Responsive card layout and live status messaging
+- Manifest and metadata for a more complete deployed product
 
-⏰ Hourly weather graph
-
-🌅 Sunrise & sunset times
-
-📌 Favorite cities list
-
-🕒 Dark mode
-
-
+## Future Improvements
+- 5-day forecast
+- Hourly forecast chart
+- Favorite cities
+- Unit switching between Celsius and Fahrenheit
+- Better branded favicon and social preview image

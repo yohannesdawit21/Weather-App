@@ -1,0 +1,17 @@
+{
+  "name": "SkyCast Weather",
+  "short_name": "SkyCast",
+  "description": "Animated real-time weather app built with React and OpenWeather.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07142f",
+  "theme_color": "#07142f",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
