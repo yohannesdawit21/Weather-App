@@ -8,7 +8,7 @@
   "theme_color": "#07142f",
   "icons": [
     {
-      "src": "/vite.svg",
+      "src": "/skycast-logo.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
